@@ -70,3 +70,21 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# RSpec-Rails
+group :development, :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+end
+
+# ffi
+gem 'ffi'
+# assert_template controller testing
+gem 'rails-controller-testing'
+
+# eager loading with Bullet
+gem 'bullet'
+
+gem 'devise'
