@@ -88,3 +88,5 @@ gem 'rails-controller-testing'
 gem 'bullet'
 
 gem 'devise'
+
+gem 'cancancan'
