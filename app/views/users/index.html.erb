@@ -1,20 +1,7 @@
 <h2 class="text-center">User Lists</h2><br/>
 
-<table class="table table-borderless">
-<thead>
-    <tr>
-      <th scope="col">User ID</th>
-      <th scope="col">User Name</th>
-      <th scope="col">Option</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @user.each do |t|%>
-        <tr>
-            <td><%= t.id%></td>
-            <td><%= t.name%></td>
-        </tr>
-    <%end%>
-  </tbody>
-
-</table>
+<div class='users container'>
+  <% @user.each do |user| %>
+    <%= render user %>
+  <%end%>
+</div>
