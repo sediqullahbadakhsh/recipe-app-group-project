@@ -12,12 +12,12 @@ class RecipesController < ApplicationController
     end
 
     def create
-        @recipe = current_user.recipes.new(recipe_params)
+        @recipe = current_user.recipe.new(recipe_params)
         @recipe.user_id = params[:user_id]
         respond_to do |format|
           if @recipe.save!
             format.html do
-              redirect_to user_recipe_path(@recipe.user_id, @recipe.id), notice: 'Recipe created successfully!'
+              redirect_to user_recipes_path, notice: 'Recipe created successfully!'
             end
           else
             format.html { redirect_to new_user_recipes_path, alert: 'Failed to create recipe' }
