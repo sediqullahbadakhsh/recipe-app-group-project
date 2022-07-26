@@ -1,0 +1,13 @@
+<div>
+  <h1>All recipes</h1>
+
+  <% if @user==current_user %>
+    <button><%= link_to "Add new Recipe", new_user_recipe_path %></button>
+  <% end %>
+</div>
+
+<div>
+  <% @user.recipes.each do |recipe| %>
+    <%= render recipe %>
+  <% end %>
+</div>
