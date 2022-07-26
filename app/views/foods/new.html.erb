@@ -1,6 +1,6 @@
-<h2>Add a food</h2>
+<h1>Add a food</h1>
 
-<%= form_for @food do |f| %>
+<%= form_with(scope: :foods, url: user_foods_path(@current_user), method: :post, local: true) do |f| %>
     <%= f.text_field :name, placeholder: 'Name' %>
     <%= f.text_field :measurement_unit, placeholder: 'Measurement unit' %>
     <%= f.text_field :price, placeholder: 'Price' %>
