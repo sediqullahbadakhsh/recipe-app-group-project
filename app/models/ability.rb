@@ -11,5 +11,6 @@ class Ability
       can :read, :all
       can :manage, Food, id: user.id
       can :manage, Recipe, user_id: user.id
+    end
   end
 end
