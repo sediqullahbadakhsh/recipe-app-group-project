@@ -1,29 +1,29 @@
 class FoodsController < ApplicationController
   def index
-    @current_user = current_user
-    @foods = Food.all
+    @user = User.find(params[:user_id])
   end
 
   def new
+    @user = current_user
     @food = Food.new
   end
 
   def create
-    @current_user = current_user
-    @food = @current_user.foods.new(food_params)
-    @food.save
-    redirect_to foods_path
+    @food = current_user.food.new(food_params)
+    @food.user_id = params[:user_id]
+    @food.save!
+    redirect_to user_foods_path
   end
 
   def destroy
     @food = Food.find(params[:id])
     @food.delete
-    redirect_to foods_path
+    redirect_to user_foods_path
   end
 
   private
 
   def food_params
-    params.require(:food).permit(:name, :measurement_unit, :price)
+    params.require(:foods).permit(:name, :measurement_unit, :price)
   end
 end
