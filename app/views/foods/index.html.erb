@@ -1,5 +1,6 @@
 <h1>Foods</h1>
 
+<% if can? :read, @user.food[0] %>
   <%= link_to "Add Food", new_user_food_path%>
 
   <table class="table">
@@ -11,17 +12,14 @@
         <th scope="col">Actions</th>
       </tr>
     </thead>
+
     <tbody>
       <% @user.food.each do |food| %>
-        <% if can? :manage, food %>
           <%= render food %>
-        <% else %>
-          <tr>
-            <td scope="row">
-              <p>You are not allowed to view other users food.</p>
-            </td>
-          </tr>
-        <% end %>
       <% end %>
     </tbody>
   </table>
+
+<% else %>
+  <p>You are not allowed to view other users food.</p>
+<% end %>
