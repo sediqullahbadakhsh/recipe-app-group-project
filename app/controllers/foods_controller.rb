@@ -1,6 +1,5 @@
 class FoodsController < ApplicationController
   def index
-    @current_user = current_user
     @user = User.find(params[:user_id])
   end
 
