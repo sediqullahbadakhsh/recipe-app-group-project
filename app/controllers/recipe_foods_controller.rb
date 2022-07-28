@@ -9,6 +9,7 @@ class RecipeFoodsController < ApplicationController
       @total_items += 1
     end
   end
+
   def new
     @recipe_food = RecipeFood.new
     @foods = Food.where(user_id: current_user)
