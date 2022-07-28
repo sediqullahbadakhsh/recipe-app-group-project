@@ -1,0 +1,34 @@
+<h1 class="text-center">Shopping List</h1>
+
+<div>
+  <p>Amount of food items to buy: <%= @items %></p>
+  <p>Total value of food needed: <%= @total_price %></p>
+</div>
+
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Food</th>
+      <th scope="col">Measurement unit</th>
+      <th scope="col">Unit price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.food.each do |food| %>
+      <tr>
+        <td scope="row"><%= food.name %></td>
+        <td><%= food.measurement_unit %></td>
+        <td>$ <%= food.price %></td>
+        <td>
+          <%= button_to "Delete",
+            user_food_path(food.user_id, food.id),
+            method: :delete,
+            class: "btn btn-light"
+          %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
