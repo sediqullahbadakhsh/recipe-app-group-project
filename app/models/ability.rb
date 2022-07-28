@@ -6,6 +6,7 @@ class Ability
     if user.role == 'admin'
       can :manage, :all
     else
+      can :manage, User, id: user.id
       can :read, Recipe, public: true
       can :manage, Food, user_id: user.id
       can :manage, Recipe, user_id: user.id

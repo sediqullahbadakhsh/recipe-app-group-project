@@ -6,8 +6,9 @@ Rails.application.routes.draw do
       resources :recipe_foods, except: [:update, :edit]
     end
     resources :recipes, except: [:update, :edit]
-    resources :general_shopping_list, except: [:update, :edit]
   end
+
+  resources :public_recipes, only: :index do
 
   # Defines the root path route ("/")
   root 'users#index'

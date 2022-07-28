@@ -1,0 +1,10 @@
+<h1 class="text-center">Public Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+  <div class="border border-2 p-2 my-5">
+    <p class="fw-bold">
+      <%= link_to recipe.name, user_recipe_path(user_id: recipe.user.id, id: recipe.id), method: :get %>
+    </p>
+    <p><%= recipe.user.name %></p>
+  </div>
+<% end %>
