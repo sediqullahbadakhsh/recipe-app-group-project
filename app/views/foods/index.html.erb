@@ -1,6 +1,6 @@
 <h1>Foods</h1>
 
-<% if can? :read, @user.food[0] %>
+<%if @user==current_user%>
   <%= link_to "Add Food", new_user_food_path%>
 
   <table class="table">
@@ -20,6 +20,4 @@
     </tbody>
   </table>
 
-<% else %>
-  <p>You are not allowed to view other users food.</p>
 <% end %>
