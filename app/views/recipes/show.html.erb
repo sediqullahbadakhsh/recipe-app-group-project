@@ -2,6 +2,7 @@
 <br>
 <div class="public_preparation">
 <h2 > Preparations time:  <%=@recipe.preparation_time %> </h2>
+<h1> public: <%= check_box_tag(:id) %></h1>
 <h1>Public <button> On</button></h1>
 
 </div>
@@ -15,7 +16,7 @@
 <%= button_to "Generate shopping list"  %>
 </h2>
 <h2 class="add_ingredient" >
-<%= button_to "Add ingredient"  %>
+<%= button_to "Add ingredient", new_user_food_recipe_food_path(@user, @food)   %>
 </h2>
 </div>
 <hr>
@@ -29,13 +30,10 @@
 <th>Food</th>
 <th>Quantity </th>
 <th>Value </th>
-
 <th  colspan="2" style="text-align:center" >Actions</th>
 
-
 </tr>
-  
-  
+   
 </thead>
 <tbody>
 <% @food.each  do |f| %>
@@ -43,9 +41,7 @@
       <td><%= f.name %></td>
       <td><%= f.quantity %></td>
       <td><%= f.price %></td>
-   
-     <td><%= button_to 'Modify', user_food_path(f) , class:' btn btn-outline-info' %> </td>
-  
+      <td><%= button_to 'Modify', user_food_path(f) , class:' btn btn-outline-info' %> </td>
       <td><%= button_to 'Remove', user_food_path(f), method: :delete,  class:' btn btn-outline-danger' %> </td>
       
   
