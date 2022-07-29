@@ -45,12 +45,22 @@ $ bundle exec rspec
 
 ## Authors
 
-👤 **Sediqullah Badakhsh**
+<!-- table Variables -->
+[@sediqullahbadakhsh]:https://github.com/sediqullahbadakhsh
+[@sediqullah]:https://www.linkedin.com/in/sediqullah/
+[@andres-condezo]:https://github.com/andres-condezo
+[andres-condezo]:https://www.linkedin.com/in/andres-condezo/
+<!-- table Variables -->
 
-- GitHub: [@sediqullahbadakhsh](https://github.com/sediqullahbadakhsh)
-- LinkedIn: [@sediqullah](https://www.linkedin.com/in/sediqullah/)
+| 👤           | **Sediqullah Badakhsh** |
+|--------------|-------------------------|
+| **GitHub**   | [@sediqullahbadakhsh]   |
+| **LinkedIn** | [@sediqullah]        |
 
-👤 **Andres Condezo**
+| 👤           | **Andres Condezo** |
+|--------------|--------------------|
+| **GitHub**   | [@andres-condezo]  |
+| **LinkedIn** | [andres-condezo]   |
 
 ## 🤝 Contributing
 
