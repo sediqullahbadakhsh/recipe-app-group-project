@@ -18,6 +18,33 @@
   margin: 2px;
   padding: 10px;
 }
+.add_new_food {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  gap: 5px;
+}
+.add-new-recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.text-area-width {
+  width: 100%;
+}
+.text-area-hight {
+  height: 100px;
+}
+.text-container-width {
+  width: 50%;
+}
+.add-recipe-options {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 @media only screen and (max-width: 600px) {
   nav .container-fluid {
     margin: 0 1rem !important;

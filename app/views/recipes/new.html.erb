@@ -1,33 +1,36 @@
-<h1>New Recipe</h1>
+<h1 class="text-center">New Recipe</h1>
 
-<%= form_with(scope: :recipes, url: user_recipes_path(@user), method: :post, local: true, class: 'd-grid gap-3') do |f| %>
-
-  <div>
+<%= form_with(scope: :recipes, url: user_recipes_path(@user), method: :post, local: true) do |f| %>
+<div class= "add-new-recipe">
+  <div class="text-container-width">
     <%= f.label :name %><br />
-    <%= f.text_field :name%>
+    <%= f.text_field :name, class: "text-area-width"%>
   </div>
 
-  <div>
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+  <div class="text-container-width">
+    <%=  f.label :preparation_time %><br />
+    <%= f.number_field :preparation_time, :step => "0.1", class: "text-area-width" %>
   </div>
 
-  <div>
-    <%= f.label :preparation_time %><br />
-    <%= f.number_field :preparation_time, :step => "0.01" %>
-  </div>
-
-  <div>
+  <div class="text-container-width">
     <%= f.label :cooking_time %><br />
-    <%= f.number_field :cooking_time, :step => "0.01" %>
+    <%= f.number_field :cooking_time, :step => "0.1", class:"text-area-width" %>
   </div>
 
-  <div class="d-flex gap-2">
-    <%= f.check_box :public %>
-    <%= f.label :public %><br />
+  <div class="text-container-width">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, class: "text-area-width text-area-hight" %>
+  </div>
+  <div class="add-recipe-options">
+    <div class="d-flex gap-2">
+      <%= f.check_box :public %>
+      <%= f.label :public %><br />
+    </div>
+
+    <div>
+      <%= f.submit "Add Recipe", class:"btn btn-dark"%>
+    </div>
   </div>
 
-  <div>
-    <%= f.submit "Add Recipe", class:"btn btn-dark"%>
-  </div>
+ </div>
 <% end %>
