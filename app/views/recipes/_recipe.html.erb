@@ -1,11 +1,22 @@
-<div>
-  <h2><%= link_to (recipe.name), user_recipe_path(recipe.user_id, recipe.id) %></h2>
+<div class="border p-4 my-4 d-flex">
+  <div class="flex container">
+    <h2 class="fw-bold">
+      <%= link_to (recipe.name),
+        user_recipe_path(recipe.user_id,recipe.id),
+        class: "badge rounded-pill text-bg-light"
+      %>
+    </h2>
 
-  <% if can? :destroy, recipe%>
-    <%= button_to "Remove", user_recipe_path(recipe.user_id, recipe.id), method: :delete %>
-  <%end%>
+    <% if can? :destroy, recipe %>
+      <%= button_to "Remove",
+        user_recipe_path(recipe.user_id,recipe.id),
+        method: :delete,
+        class: "btn btn-dark"
+      %>
+    <% end %>
   </div>
 
-
-
-<p><%=recipe.description%></p>
+  <div class="flex container">
+    <p><%= recipe.description %></p>
+  </div>
+</div>

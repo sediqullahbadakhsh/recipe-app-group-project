@@ -1,13 +1,23 @@
-<div>
-  <h1>All recipes</h1>
+<h1 class="text-center"><%= @user.name %>'s recipes</h1>
 
+<% if @user==current_user %>
+  <div class="btn-container">
+    <%= link_to "Add new Recipe",
+        new_user_recipe_path,
+        class: "btn btn-dark m-4"
+    %>
+  </div>
+<% end %>
+
+<div class="">
   <% if @user==current_user %>
-    <button><%= link_to "Add new Recipe", new_user_recipe_path %></button>
-  <% end %>
-</div>
+    <% @user.recipe.each do |recipe| %>
+      <%= render recipe %>
+    <% end %>
 
-<div>
-  <% @user.recipe.each do |recipe| %>
-    <%= render recipe %>
+  <% else %>
+    <% @user.recipe.where(public: true).each do |recipe| %>
+      <%= render recipe %>
+    <% end %>
   <% end %>
 </div>
