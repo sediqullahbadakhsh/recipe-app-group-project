@@ -1,6 +1,6 @@
 <h1>New Recipe</h1>
 
-<%= form_with(scope: :recipes, url: user_recipes_path(@user), method: :post, local: true) do |f| %>
+<%= form_with(scope: :recipes, url: user_recipes_path(@user), method: :post, local: true, class: 'd-grid gap-3') do |f| %>
 
   <div>
     <%= f.label :name %><br />
@@ -22,12 +22,12 @@
     <%= f.number_field :cooking_time, :step => "0.01" %>
   </div>
 
-  <div>
-    <%= f.label :public %><br />
+  <div class="d-flex gap-2">
     <%= f.check_box :public %>
+    <%= f.label :public %><br />
   </div>
 
   <div>
-    <%= f.submit "Add Recipe" %>
+    <%= f.submit "Add Recipe", class:"btn btn-dark"%>
   </div>
 <% end %>
