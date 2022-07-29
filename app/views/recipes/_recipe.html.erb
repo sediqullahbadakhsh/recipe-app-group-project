@@ -1,11 +1,11 @@
-<div>
+<div class="border border-1 border-info p-4 my-4 d-flex">
   <h2><%= link_to (recipe.name), user_recipe_path(recipe.user_id, recipe.id) %></h2>
 
-  <% if can? :destroy, recipe%>
+  <% if can? :destroy, recipe %>
     <%= button_to "Remove", user_recipe_path(recipe.user_id, recipe.id), method: :delete %>
-  <%end%>
+  <% end %>
   </div>
 
 
 
-<p><%=recipe.description%></p>
+<p><%= recipe.description %></p>
