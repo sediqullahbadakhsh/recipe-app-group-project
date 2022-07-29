@@ -11,14 +11,23 @@ class FoodsController < ApplicationController
   def create
     @food = current_user.food.new(food_params)
     @food.user_id = params[:user_id]
-    @food.save!
-    redirect_to user_foods_path
+    if @food.save!
+      flash[:notice] = 'Food created successfully!'
+      redirect_to user_foods_path
+    else
+      flash[:alert] = 'Food Already exist!'
+      render 'new'
+    end  
   end
 
   def destroy
     @food = Food.find(params[:id])
-    @food.delete
-    redirect_to user_foods_path
+    if @food.delete
+      flash[:notice] = 'Food deleted successfully!'
+      redirect_to user_foods_path
+    else
+      flash[:alert] = 'Food used in Recipe'
+    end
   end
 
   private
