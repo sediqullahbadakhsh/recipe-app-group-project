@@ -7,7 +7,14 @@
 </div>
 
 <div>
-  <% @user.recipe.each do |recipe| %>
-    <%= render recipe %>
+  <% if @user==current_user %>
+    <% @user.recipe.each do |recipe| %>
+      <%= render recipe %>
+    <% end %>
+
+  <% else %>
+    <% @user.recipe.where(public: true).each do |recipe| %>
+      <%= render recipe %>
+    <% end %>
   <% end %>
 </div>

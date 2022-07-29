@@ -14,9 +14,9 @@
 
   <%@recipe_foods.each do |item|%>
   <tr>
-    <td><%=item.food.name%></td>
-    <td><%=item.quantity%> <%= item.food.measurement_unit%></td>
-    <td><%=item.food.price * item.quantity%>$</td>
+    <td><%= item.food.name %></td>
+    <td><%= item.quantity %> <%= item.food.measurement_unit %></td>
+    <td><%= item.food.price * item.quantity %>$</td>
   </tr>
   <%end%>
 </table>
