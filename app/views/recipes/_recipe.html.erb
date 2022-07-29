@@ -1,9 +1,9 @@
-<div class="border border-1 border-info p-4 my-4 d-flex">
+<div class="border p-4 my-4 d-flex">
   <div class="flex container">
     <h2 class="fw-bold">
       <%= link_to (recipe.name),
         user_recipe_path(recipe.user_id,recipe.id),
-        class: "nav-link link-info"
+        class: "badge rounded-pill text-bg-light"
       %>
     </h2>
 
@@ -11,7 +11,7 @@
       <%= button_to "Remove",
         user_recipe_path(recipe.user_id,recipe.id),
         method: :delete,
-        class: "btn btn-secondary"
+        class: "btn btn-dark"
       %>
     <% end %>
   </div>
