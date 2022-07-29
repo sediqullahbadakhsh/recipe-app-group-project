@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+@media only screen and (max-width: 600px) {
+  nav .container-fluid {
+    margin: 0 1rem !important;
+    padding: 0 !important;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .add-food-btn {
+    float: none !important;
+  }
+}
