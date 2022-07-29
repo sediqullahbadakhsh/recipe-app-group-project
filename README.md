@@ -1,6 +1,6 @@
-# Blog App
+# Recipe App
 
-> This is a Blog app, where you can signup and create your user, to add posts and comments
+> This is a Recipe App, that let's you add or remove your food items, manage your recipes (Add recipe, add ingredients, remove ingredients, remove recipe), generate shoping list for the missing food, view other users recipes and view all public recipes.
 
 ## Built With
 
@@ -13,8 +13,8 @@
 ### Clone this repository
 
 ```bash
-$ git clone git@github.com:Sahar-AbdelSamad/Blog-App.git
-$ cd Blog-App
+$ git clone https://github.com/sediqullahbadakhsh/recipe-app-group-project.git
+$ cd recipe-app-group-project
 ```
 
 ### Install gems
@@ -46,19 +46,21 @@ $ bundle exec rspec
 ## Authors
 
 <!-- table Variables -->
-[@sediqullahbadakhsh]:https://github.com/sediqullahbadakhsh
-[@sediqullah]:https://www.linkedin.com/in/sediqullah/
-[@andres-condezo]:https://github.com/andres-condezo
-[andres-condezo]:https://www.linkedin.com/in/andres-condezo/
+
+[@sediqullahbadakhsh]: https://github.com/sediqullahbadakhsh
+[@sediqullah]: https://www.linkedin.com/in/sediqullah/
+[@andres-condezo]: https://github.com/andres-condezo
+[andres-condezo]: https://www.linkedin.com/in/andres-condezo/
+
 <!-- table Variables -->
 
 | 👤           | **Sediqullah Badakhsh** |
-|--------------|-------------------------|
+| ------------ | ----------------------- |
 | **GitHub**   | [@sediqullahbadakhsh]   |
-| **LinkedIn** | [@sediqullah]        |
+| **LinkedIn** | [@sediqullah]           |
 
 | 👤           | **Andres Condezo** |
-|--------------|--------------------|
+| ------------ | ------------------ |
 | **GitHub**   | [@andres-condezo]  |
 | **LinkedIn** | [andres-condezo]   |
 
