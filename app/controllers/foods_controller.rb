@@ -17,7 +17,7 @@ class FoodsController < ApplicationController
     else
       flash[:alert] = 'Food Already exist!'
       render 'new'
-    end  
+    end
   end
 
   def destroy

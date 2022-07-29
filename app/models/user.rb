@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :recipe, dependent: :delete_all
 
   validates :name, presence: true
+  validates :password, presence: true
 end
